@@ -2,19 +2,42 @@
 import React from 'react';
 import { Text,View } from 'react-native';
 
-//make a component
-// const Header = () => {
-//     return <Text>Albums!</Text>
-// }
+// make a component
+const Header = ( props ) => {
+    const { textStyle, viewStyle } = styles;
+    return(
+    <View style={viewStyle}>
+        <Text style={textStyle}>{props.headerText}!</Text>
+    </View>
+    ); 
+}
+
+const styles = {
+    viewStyle: {
+        backgroundColor: '#F8F8F8',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 60,
+        paddingTop: 30,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        elevation: 2,
+        position: 'relative'
+    },
+    textStyle: {
+        fontSize: 20
+    }
+};
 
 //make component to available to other part
-// export default Header;
+export default Header;
 
-export default class Header extends React.Component {
-    render() {
-        return(<View>
-            <Text>Albums!</Text>
-            </View>
-        );
-    }
-}
+// export default class Header extends React.Component {
+//     render() {
+//         return(<View>
+//             <Text>Albums!</Text>
+//             </View>
+//         );
+//     }
+// }
