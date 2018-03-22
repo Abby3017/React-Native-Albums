@@ -11,7 +11,9 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 ##How To Run
 
  yarn 
+ 
  yarn start
+ 
  and expo app
 
 
